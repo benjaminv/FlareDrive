@@ -26,9 +26,12 @@ Before starting, you should make sure that
 Steps:
 
 1. Fork this project and connect your fork with Cloudflare Pages
-   - Select `Docusaurus` framework preset
-   - Set `WEBDAV_USERNAME` and `WEBDAV_PASSWORD`
-   - (Optional) Set `WEBDAV_PUBLIC_READ` to `1` to enable public read
+   - Go to [Cloudflare Pages](https://dash.cloudflare.com/?to=/:account/pages)
+   - Click `Create` a project, then choose `Pages` tab, then `Connect to Git` and select your fork
+   - Continue to setup, where
+     - Select `Docusaurus` framework preset
+     - Set `WEBDAV_USERNAME` and `WEBDAV_PASSWORD`
+     - (Optional) Set `WEBDAV_PUBLIC_READ` to `1` to enable public read
 2. After initial deployment, bind your R2 bucket to `BUCKET` variable
 3. Retry deployment in `Deployments` page to apply the changes
 4. (Optional) Add a custom domain
@@ -37,6 +40,8 @@ You can also deploy this project using Wrangler CLI:
 
 ```bash
 npm run build
+# recommend Node.js 18.x as this is the current Cloudflare Workers runtime
+# use "module": "CommonJS" in tsconfig.json if you use higher versions than 16.x to avoid build errors
 npx wrangler pages deploy build
 ```
 
