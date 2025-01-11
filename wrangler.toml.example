@@ -1,0 +1,13 @@
+name = "flaredrive"
+pages_build_output_dir = "build"
+compatibility_date = "2025-01-11"
+
+# we might still need .env for local development
+# unfortunately, wrangler.toml won't include / load .env files: https://github.com/cloudflare/workers-sdk/issues/3106
+[vars]
+WEBDAV_USERNAME = ""
+WEBDAV_PASSWORD = ""
+
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = ""
