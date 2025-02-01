@@ -42,14 +42,6 @@ function Header({
       >
         <MenuItem>View as</MenuItem>
         <MenuItem>Sort by</MenuItem>
-        <MenuItem
-          onClick={() => {
-            setAnchorEl(null);
-            setShowProgressDialog(true);
-          }}
-        >
-          Progress
-        </MenuItem>
       </Menu>
     </Toolbar>
   );

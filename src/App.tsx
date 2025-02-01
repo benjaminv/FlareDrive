@@ -10,7 +10,7 @@ import React, { useState } from "react";
 
 import Header from "./Header";
 import Main from "./Main";
-import ProgressDialog from "./ProgressDialog";
+import ProgressDialog, { ProgressFab } from "./ProgressDialog";
 import { TransferQueueProvider } from "./app/transferQueue";
 
 const globalStyles = (
@@ -45,6 +45,7 @@ function App() {
           message={error?.message}
           onClose={() => setError(null)}
         />
+        <ProgressFab onClick={() => setShowProgressDialog(true)} />
         <ProgressDialog
           open={showProgressDialog}
           onClose={() => setShowProgressDialog(false)}
