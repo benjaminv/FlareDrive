@@ -1,0 +1,12 @@
+name = "flaredrive"
+# account_id = "6fad7ca99c0223d2f59df0e7d8eb4cd8"
+pages_build_output_dir = "build"
+compatibility_date = "2025-01-11"
+
+[vars]
+WEBDAV_USERNAME = "home"
+WEBDAV_PASSWORD = "H3D7jUduY8frlB+_&rAy"
+
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "home"
